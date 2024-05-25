@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="OnlineBookShop.Views.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        *{
+            font-family:Tahoma;
+        }
+        #left{
+            color:white;
+            height:745px;
+            background-color:cornflowerblue;
+            font-size:20px;
+        }
+        label{
+            color:white;
+        }
+    </style>
+    <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" id="left">
+                <div style="height:205px">
+                    <img src="../../Assets/Images/icons8-line-64.png" id="Logo" height="50" width="50"/>
+                </div>
+
+                <div class="p-2">
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/icons8-book-100.png" height="50" width="50"/>
+                        <a href="Books.aspx"><label>Books</label></a>
+                    </div>
+
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/icons8-user-typing-using-typewriter-64.png" height="50" width="50"/>
+                        <a href="Author.aspx"><label>Authors</label></a>
+                    </div>
+
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/icons8-administrator-male-100.png" height="50" width="50"/>
+                        <a href="Seller.aspx"><label>Sellers</label></a>
+                    </div>
+
+                     <div class="mb-3">
+                        <img src="../../Assets/Images/icons8-categorize-52.png" height="50" width="50"/>
+                        <a href="Categories.aspx"><label>Categories</label></a>
+                    </div>
+
+                    <div style="height: 170px"></div>
+
+                     <div class="mb-3">
+                        <img src="../../Assets/Images/icons8-home-52.png" height="50" width="50"/>
+                        <a href="../Login.aspx"><label>Logout</label></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-10">
+                <form id="form1" runat="server">
+                    <div>
+                        <asp:ContentPlaceHolder ID="MyContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
